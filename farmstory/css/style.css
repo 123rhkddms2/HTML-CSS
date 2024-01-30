@@ -209,41 +209,66 @@ main > section {
 /* main - info */
 .info {
     height: 154px;
+    overflow: hidden;
     padding-top: 10px;
     border-top: 2px solid #756c65;
     box-sizing: border-box;
 }
 .info > div {
     float: left;
-    height: 100%; 
+    height: 100%;
 }
-.info > div:nth-child(1){width: 386px;}
 
-.info > div:nth-child(1) > img:nth-child(1){
-    position: relative;     
-    float: left;
-    
+.info > div:nth-child(1){
+    width: 386px;
 }
-.info > div:nth-child(1) > img:nth-child(2){}
-.info > div:nth-child(1) > p:nth-child(3){}
-.info > div:nth-child(1) > p:nth-child(4){}
-.info > div:nth-child(1) > p:nth-child(5){}
-.info > div:nth-child(1) > img:nth-child(6){}
-.info > div:nth-child(1) > img:nth-child(7){}
 
-
-
+.info > div:nth-child(1)> .tel > p{
+    float: right;
+}
 
 
 .info > div:nth-child(2){
     width: 230px;
-    padding-left: 10px;
+    padding-left: 16px;
     border-left: 1px solid #d7d7d7;
     border-right: 1px solid #d7d7d7;
     box-sizing: border-box;
     
 }
-.info > div:nth-child(3){width: 364px;}
+.info > div:nth-child(3){
+    width: 364px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+main > .info > div > .tit {
+    margin-bottom: 16px;
+}
+
+main > .info > div > .tel {
+    overflow: hidden;
+}
+main > .info > div > .tel > * {
+    float: left;
+    margin-right: 16px;
+}
+
+main > .info > div > .tel > .time {
+    line-height: 18px;
+    color: #666;
+    
+}
+
+main > .info > div > .btns {
+    margin-top: 16px;
+}
+
+main > .info > div > .account {
+    line-height: 18px;
+    color: #666;
+}
+
 
 
 
