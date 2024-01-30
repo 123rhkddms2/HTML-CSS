@@ -1,302 +1,366 @@
-    /* 초기화 */
+/* 초기화 */
 * {
   margin: 0;
   padding: 0;
-  font: normal 12px "돋움";
-}
-ul,
-ol {
-  list-style: none;
-}
-a {
-  text-decoration: none;
-  color: #111;
-}
-input,
-textarea {
-  outline: none;
+  font: normal 12px '돋움';
 }
 
-/* container */
-#container {
+ul, ol {list-style: none;}
+a {text-decoration: none; color: #111;}
+input, textarea {outline: none;}
+body {}
+#wrapper {
   width: 800px;
   height: auto;
   margin: 0 auto;
 }
-/* header */
+
 header {
   width: 100%;
-  height: 40px;
+  height: auto;
+  padding: 10px;
   background: #f7f7f7;
   border-bottom: 1px solid #ebebeb;
-  box-sizing: border-box;
+  overflow: hidden;
 }
-
 header > h3 {
-  float: left;
-  font-weight: bold;
+  float: left;    
   color: #777;
-  margin-top: 14px;
-  margin-left: 10px;
+  font-weight: bold;
 }
-
 header > p {
   float: right;
-  margin-top: 16px;
-  margin-right: 10px;
 }
-
-/* main */
-main {
+footer {
   width: 100%;
   height: auto;
-}
-main > section {
+  padding: 10px;
+  box-sizing: border-box;
+  background: #f7f7f7;
+  border-top: 1px solid #ebebeb;
+  text-align: right;
+  color: #777;
 }
 
-/* login */
+
+/* 회원-로그인 */
+#user {}
 .login {
-  position: relative;
   width: 360px;
   height: auto;
-  border: 1px solid #cfded8;
-  box-sizing: border-box;
-  margin: 100px auto;
+  margin: 100px auto;            
 }
 .login > form {
+  position: relative;
+  padding: 20px 20px 20px 50px;
+  border: 1px solid #cfded8;
+  background: #fff;
+  border-bottom: 0;
 }
-.login > form > table {
-  margin-left: 52px;
-  margin-top: 30px;
-}
-.login > form > table tr {
-}
-.login > form > table td {
-}
+
 .login > form > table img {
   width: 20px;
 }
 .login > form > table input {
   width: 162px;
   height: 22px;
-  margin-left: 6px;
-  margin-bottom: 4px;
+  margin: 0 0 5px 0;
   border: 1px solid #e4eaec;
   background: #f7f7f7;
+  color: #111;            
 }
-.login > form > input[type="submit"] {
+.login > form > input[type=submit] {
   position: absolute;
-  right: 48px;
-  top: 33px;
+  right: 52px;
+  top: 22px;
   width: 60px;
-  height: 52px;
+  height: 55px;
+  padding: 8px;
   border: 1px solid #bebebe;
-  background-color: #fdfdfd;
+  background: #fdfdfd;
+  color: #111;
 }
 
-.login > div {
-  width: 100%;
-  height: 100px;
-  background-color: #f5f6fa;
-  border-top: 1px solid #cfded8;
-  margin-top: 20px;
+.login > .info {
+  margin-bottom: 30px;
   padding: 20px;
-  box-sizing: border-box;
+  border: 1px solid #cfded8;
+  background: #f5f6fa;
+  overflow: hidden;
 }
-.login > div > h3 {
+
+.login > .info > p {
+  padding: 10px 0;
 }
-.login > div > p {
-  margin: 10px 0;
-}
-.login > div > a {
+.login > .info > a {
   float: right;
 }
 
-/* terms */
+/* 회원-약관 */
 .terms {
   width: 600px;
-  height: auto;
-  margin: 60px auto;
+  margin: 60px auto;            
 }
 .terms > table {
   width: 100%;
-  height: auto;
   border-top: 2px solid #111;
-  box-sizing: border-box;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 .terms > table > caption {
   text-align: left;
   font-weight: bold;
   padding: 10px 0;
-  box-sizing: border-box;
 }
-.terms > table tr {
-}
-.terms > table td {
-  padding: 6px;
+.terms > table tr {}
+.terms > table tr > td {
+  padding: 6px 10px;
   border: 1px solid #e9e9e9;
-  box-sizing: border-box;
 }
+
 .terms > table textarea {
   width: 100%;
   height: 200px;
-  background: #f7f7f7;
+  resize: none;
   border: 1px solid #e4eaec;
+  background: #f7f7f7;
+  color: #111;
   padding: 2px;
-  box-sizing: border-box;
 }
-.terms > table label {
+.terms > table p {
   float: right;
 }
-.terms > table input[type="checkbox"] {
-  margin-right: 2px;
-}
-
-.terms > table p {
-}
+.terms > table p > input {}
 
 .terms > div {
-  margin-top: 10px;
-  text-align: center;
+  padding: 20px 0;
+  text-align: right;
 }
 .terms > div > a {
+  padding: 8px;
+  border: 1px solid #bebebe;
+  color: #111;
 }
+.terms > div > a:nth-child(1) {background: #fdfdfd;}
+.terms > div > a:nth-child(2) {background: #e9e9e9;}
 
-/* register */
+/* 회원-회원가입 */
 .register {
   width: 600px;
   height: auto;
-  margin: 60px auto;
-  box-sizing: border-box;
+  margin: 60px auto;            
 }
-.register > form {
-}
-.register > form > table {
+.register > form {}
+.register table {
   width: 100%;
-  margin-bottom: 10px;
   border-top: 2px solid #111;
-  border-spacing: 0;
   border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 10px;
 }
-.register > form > table > caption {
-  text-align: left;
+.register table caption {
   padding: 10px 0;
   font-weight: bold;
-  box-sizing: border-box;
+  text-align: left;
 }
-.register > form > table tr {
-}
-.register > form > table td {
+.register table tr {}
+.register table td {
   padding: 6px 12px;
-  border: 1px solid #d9d9d9;
-  box-sizing: border-box;
+  border: 1px solid #e9e9e9;
 }
-.register > form > table td:nth-child(1) {
-  width: 106px;
+
+.register table td:nth-child(1) {
+  width: 80px;
   background: #f5f8f9;
 }
-.register > form > table td:nth-child(2) {
-}
-.register > form > table input {
-  width: 162px;
+
+.register table input {
+  width: 160px;
   height: 22px;
-  border: 1px solid #e4eaec;
   background: #f7f7f7;
-  text-indent: 4px;
+  border: 1px solid #e4eaec;
+  text-indent: 6px;
+}
+.register table span {}
+
+.register table div {
+  margin-bottom: 2px;
+}
+.register table div:nth-child(1) > input {width:  80px;}
+.register table div:nth-child(2) > input {width: 320px;}
+.register table div:nth-child(3) > input {width: 320px;}
+
+.register button {    
+border: none;
+vertical-align: middle;
 }
 
-.register > form > table input[name="addr1"] {
-  width: 360px;
-  margin: 4px 0;
-}
-.register > form > table input[name="addr2"] {
-  width: 360px;
-}
-
-.register > form > table button {
-  border: none;
-  vertical-align: -2px;
-}
-
-.register > form > div {
+.register > form > div {            
   text-align: right;
 }
-
-/* list */
-.list {
-  width: 720px;
-  height: auto;
-  margin: 60px auto;
+.register > form > div > .btnCancel {
+  padding: 8px;
+  border: 1px solid #bebebe;
+  background: #fdfdfd;
+  color: #111;
 }
-.list > h3 {}
-.list > article {}
-.list > article > table {
+.register > form > div > .btnJoin {
+  padding: 7px;
+  border: 1px solid #bebebe;
+  background: #e9e9e9;
+  color: #111;
+}
+
+/* 게시판 - 공통 */
+#board {
+  width: 720px;
+  margin: 60px auto;            
+}
+
+ table {
   width: 100%;
   border-top: 2px solid #111;
-  border-spacing: 0;
   border-collapse: collapse;
+  border-spacing: 0;
   margin-top: 6px;
 }
-.list > article > table tr {}
-.list > article > table th {
+
+ table th {
   padding: 12px;
   border-top: 1px solid #d1dee2;
   border-bottom: 1px solid #d1dee2;
-  background-color: #e5ecef;
+  background: #e5ecef;
   color: #383838;
 }
-.list > article > table td {
-  padding: 12px;
+
+ table td {
+  padding: 12px 6px;
   border-top: 1px solid #e9e9e9;
   border-bottom: 1px solid #e9e9e9;
 }
-.list > article > table td:nth-child(1) {width: 50px; text-align: center;}
-.list > article > table td:nth-child(2) {width: auto;}
-.list > article > table td:nth-child(3) {width: 100px; text-align: center;}
-.list > article > table td:nth-child(4) {width: 100px; text-align: center;}
-.list > article > table td:nth-child(5) {width: 50px; text-align: center;}
+ table td:nth-child(1) {
+  width: 100px;
+  background: #f5f8f9;
+  text-align: center;
+}
+
+ table input {
+  width: 100%;
+  height: 24px;
+  border: 0;    
+}
+ table textarea {
+  width: 100%;
+  height: 280px;
+  resize: none;    
+  border: 0;
+}
+
+ .btnWrite  { padding: 7px; border: 1px solid #3b3c3f; background: #4b545e; color: #fff;}
+ .btnCancel { padding: 8px; border: 1px solid #bebebe; background: #fdfdfd; color: #111;}
+ .btnDelete { padding: 8px; border: 1px solid #bebebe; background: #fdfdfd; color: #111;}
+ .btnModify { padding: 8px; border: 1px solid #bebebe; background: #fdfdfd; color: #111;}
+ .btnList   { padding: 8px; border: 1px solid #bebebe; background: #fdfdfd; color: #111;}
+
+/* 게시판 - 글목록 */
+.list {
+  position: relative;
+}
+.list > h3 {}
+.list > article {}
+.list > article > p {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.list > article > table tr > td:nth-child(1) {width:  50px; text-align: center; background: #fff;}
+.list > article > table tr > td:nth-child(2) {width:  auto; text-align: left;}
+.list > article > table tr > td:nth-child(3) {width: 100px; text-align: center;}
+.list > article > table tr > td:nth-child(4) {width: 100px; text-align: center;}
+.list > article > table tr > td:nth-child(5) {width:  50px; text-align: center;}
 
 .list > .paging {
   padding: 20px;
-  text-align: center;
+  text-align: center;            
 }
 .list > .paging > a {
   padding: 8px;
   background: #f2f2f2;
-  border: 1px solid #d7d7d7;
+  border: 1px solid #d7d7d7;            
 }
-.list > .paging > .prev {}
-.list > .paging > .next {}
-.list > .paging > .num {}
+
 .list > .paging > .current {
   border: 1px solid #6d6d6d;
   background: #888;
   color: #fff;
 }
 
-.list > div {
+.list > .btnWrite {
+  position: absolute;
+  bottom: 14px;
+  right: 0;
+}
+/* 게시판-글보기 */
+.view > div {
+  padding: 16px 0;
   text-align: right;
 }
 
+.view > section {
+  padding: 20px;
+  border: 1px solid #e3e3e3;
+  background: #f9f9f9;
+  margin-bottom: 16px;
+}
+.view > section > h3 {
+  font-weight: bold;
+}
 
+.view > .commentList > article {
+  border-top: 1px dotted #999;
+  margin-top: 10px;
+  padding-top: 10px;
+}
 
-/* footer */
-footer {
+.view > .commentList > article > textarea {
   width: 100%;
-  height: 36px;
-  background: #f7f7f7;
-  border-top: 1px solid #ebebeb;
+  height: 60px;
+  padding: 6px;
   box-sizing: border-box;
+  resize: none;
+  border: 0;
+  background: transparent;
 }
-footer > p {
-  float: right;
-  margin-top: 12px;
-  margin-right: 10px;
-  color: #777;
+.view > .commentList > article > div {
+  text-align: right;
 }
 
-/* 공통 */
-.btnNext   {display: inline-block;padding: 8px;border: 1px solid #bebebe;background: #e9e9e9;color: #111;}
-.btnCancel {display: inline-block;padding: 8px;border: 1px solid #bebebe;background: #fdfdfd;color: #111;}
-.btnSubmit {display: inline-block;padding: 8px;border: 1px solid #3b3c3f;background: #4b545e;color: #fff;}
-.btnWrite  {display: inline-block;padding: 8px;border: 1px solid #3b3c3f;background: #4b545e;color: #fff;}
+.view > .commentList > .empty {
+  padding: 20px 0;
+  text-align: center;
+}
+
+.view > .commentForm > form > textarea {
+  width: 100%;
+  height: 60px;
+  border: 1px solid #e4eaec;
+  margin: 10px 0;
+  resize: none;
+}
+.view > .commentForm > form > div {
+  text-align: right;
+}
+
+/* 게시판-글쓰기 */
+.write {}
+.write form > div {
+  margin-top: 10px;
+  text-align: right;
+}
+
+/* 게시판-글수정 */
+.modify form > div {
+  margin-top: 10px;
+  text-align: right;
+}
