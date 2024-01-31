@@ -349,8 +349,6 @@ main > section > article > ul > li > a {
 footer {
     width: 1000px;
     height: 130px;
-    border: 1px solid blue;
-    box-sizing: border-box;
     margin: 0 auto;
     margin-bottom: 10px;
 }
